@@ -1,0 +1,101 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to the next row */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 32px; /* Spacing between cards (gap-8) */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.country-card {
+  width: 100%;
+  max-width: 288px;
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.country-card:hover {
+  transform: translateY(-4px); /* hover:-translate-y-1 */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1); /* hover:shadow-2xl */
+}
+
+/* Responsive Breakpoint (for screens wider than ~640px) */
+@media (min-width: 640px) {
+  .country-card {
+    width: 288px; /* Fixed width on desktop/tablet */
+  }
+}
+
+.country-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+.detail-section {
+  margin-top: 12px;
+  text-align: left;
+  color: #4b5563;
+}
+.detail-section p {
+  line-height: 1.5; /* space-y-1 simulation */
+}
+.detail-value {
+  float: right;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s;
+}
+.search-input:focus {
+  border-color: #4f46e5; /* focus:border-indigo-600 */
+  outline: none;
+}
+
+.search-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4f46e5; /* Indigo */
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.search-button:hover {
+  background-color: #4338ca; /* Darker Indigo */
+}
+
+.search-button:active {
+  transform: translateY(1px); /* Press effect */
+}
